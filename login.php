@@ -1,5 +1,5 @@
 <?
-$conn=new mysqli("localhost", "mototli_japones", "Japones1209!", "mototli_japones") or die("ConnectionFailed");
+$conn=new mysqli("localhost", "registro", "Japones1209!", "registro") or die("ConnectionFailed");
 
 if(isset($_POST['login'])){ //check if form was submitted
   $usuario = $_POST['usuario']; //get input text
