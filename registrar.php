@@ -1,5 +1,5 @@
 <?
-$conn=new mysqli("localhost", "mototli_japones", "Japones1209!", "mototli_japones") or die("ConnectionFailed");
+$conn=new mysqli("localhost", "registro", "", "registro") or die("ConnectionFailed");
 
 if(isset($_POST['crear'])){
     $usuario=$_POST['usuario'];
