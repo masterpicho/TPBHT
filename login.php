@@ -1,7 +1,7 @@
 <?PHP
 $conn=new mysqli("localhost", "root", "", "registro") or die("ConnectionFailed");
 
-$this->pdo = new PDO($GLOBALS['localhost'], $GLOBALS['root'], $GLOBALS['']);
+$this->pdo = new PDO($GLOBALS['db_dsn'], $GLOBALS['db_username'], $GLOBALS['db_password']);
 
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
