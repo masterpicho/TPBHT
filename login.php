@@ -1,12 +1,14 @@
 <?PHP
 $conn=new mysqli("localhost", "root", "", "registro") or die("ConnectionFailed");
-
+$queryCrearTabla="CREATE TABLE users (usuario VARCHAR(50) NOT NULL, contrasena VARCHAR(200) NOT NULL)";
+    $resultCrearTabla=mysqli_query($conn,$queryCrearTabla);
+/*
 $this->pdo = new PDO($GLOBALS['db_dsn'], $GLOBALS['db_username'], $GLOBALS['db_password']);
 
         $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
         $this->pdo->query("CREATE TABLE users (usuario VARCHAR(50) NOT NULL, contrasena VARCHAR(200) NOT NULL)");
-
+*/
 $usuario="Luis";
 $contrasenaEncriptada=password_hash("Hola", PASSWORD_DEFAULT);
     $queryIngresarUsuario="INSERT INTO `users`(`usuario`, `contrasena`) VALUES ('$usuario','$contrasenaEncriptada')";
