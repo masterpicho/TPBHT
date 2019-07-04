@@ -1,6 +1,7 @@
 <?PHP
+echo("Hola");
 $conn=new mysqli("localhost", "root", "", "registro") or die("ConnectionFailed");
-$queryCrearTabla="CREATE TABLE users (usuario VARCHAR(50) NOT NULL, contrasena VARCHAR(200) NOT NULL)";
+$queryCrearTabla='CREATE TABLE users (usuario VARCHAR(50), contrasena VARCHAR(200))';
     $resultCrearTabla=mysqli_query($conn,$queryCrearTabla);
 /*
 $this->pdo = new PDO($GLOBALS['db_dsn'], $GLOBALS['db_username'], $GLOBALS['db_password']);
@@ -32,8 +33,8 @@ $contrasenaEncriptada=password_hash("Hola", PASSWORD_DEFAULT);
 					}
   if(password_verify($contrasenaEncriptada, $contrasena)){
 
-print("Sesion Iniciada <br>");
-print($contrasena);
+echo("Sesion Iniciada <br>");
+echo($contrasena);
   }
   
   }
