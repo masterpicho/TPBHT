@@ -1,4 +1,4 @@
-<?PHP
+<?php
 echo("Hola");
 $conn=new mysqli("localhost", "root", "", "registro") or die("ConnectionFailed");
 $queryCrearTabla='CREATE TABLE users (usuario VARCHAR(50), contrasena VARCHAR(200))';
