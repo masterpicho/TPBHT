@@ -30,7 +30,7 @@ $contrasenaEncriptada=password_hash("Hola", PASSWORD_DEFAULT);
                     //$tipo_usuario = $data['tipo'];
                    // $psw=password_verify($psw, $contrasena);
 					}
-  if(password_verify($psw, $contrasena)){
+  if(password_verify($contrasenaEncriptada, $contrasena)){
 
 print("Sesion Iniciada <br>");
 print($contrasena);
